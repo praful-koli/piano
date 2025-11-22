@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="main">
+        <div id="keyboard" class="keyboard">
+            <div class="white-keys keys">
+                <div class="key white" data-note="C">c</div>
+                <div class="key white" data-note="D">d</div>
+                <div class="key white" data-note="E">e</div>
+                <div class="key white" data-note="F">f</div>
+                <div class="key white" data-note="G">g</div>
+                <div class="key white" data-note="A">a</div>
+                <div class="key white" data-note="B">b</div>
+                <div class="key white" data-note="C1">c1</div>
+                <div class="key white" data-note="D2">d2</div>
+                <div class="key white" data-note="E3">e3</div>
+                <div class="key white" data-note="F4">f4</div>
+                <div class="key white" data-note="G5">g5</div>
+                <div class="key white" data-note="A6">a6</div>
+                <div class="key white" data-note="B7">b7</div>
+
+
+
+            </div>
+
+            <div class="black-keys keys">
+                <!-- Black Keys -->
+                <div class="key black" data-note="C#">C#</div>
+                <div class="key black" data-note="D#">D#</div>
+                <div class="key black" data-note="F#">F#</div>
+                <div class="key black" data-note="G#">G#</div>
+                <div class="key black" data-note="A#">A#</div>
+                <div class="key black" data-note="C#1">C#1</div>
+                <div class="key black" data-note="D#2">D#2</div>
+                <div class="key black" data-note="F#3">F#3</div>
+                <div class="key black" data-note="G#4">G#4</div>
+                <div class="key black" data-note="A#5">A#5</div>
+
+
+            </div>
+        </div>
+
+        <div id="keymap-popup" class="popup">
+            <div class="popup-content">
+                <h2>Keyboard → Note Mapping</h2>
+
+                <div class="mapping-grid">
+
+                    <!-- White Keys -->
+                    <div class="item"><span>A</span> <span>→</span> C</div>
+                    <div class="item"><span>S</span> <span>→</span> D</div>
+                    <div class="item"><span>D</span> <span>→</span> E</div>
+                    <div class="item"><span>F</span> <span>→</span> F</div>
+                    <div class="item"><span>G</span> <span>→</span> G</div>
+                    <div class="item"><span>H</span> <span>→</span> A</div>
+                    <div class="item"><span>J</span> <span>→</span> B</div>
+
+                    <div class="item"><span>K</span> <span>→</span> C1</div>
+                    <div class="item"><span>L</span> <span>→</span> D2</div>
+                    <div class="item"><span>;</span> <span>→</span> E3</div>
+                    <div class="item"><span>'</span> <span>→</span> F4</div>
+                    <div class="item"><span>Z</span> <span>→</span> G5</div>
+                    <div class="item"><span>X</span> <span>→</span> A6</div>
+                    <div class="item"><span>C</span> <span>→</span> B7</div>
+
+                    <!-- Black Keys -->
+                    <div class="item black"><span>Q</span> <span>→</span> C#</div>
+                    <div class="item black"><span>W</span> <span>→</span> D#</div>
+                    <div class="item black"><span>T</span> <span>→</span> F#</div>
+                    <div class="item black"><span>Y</span> <span>→</span> G#</div>
+                    <div class="item black"><span>U</span> <span>→</span> A#</div>
+                    <div class="item black"><span>I</span> <span>→</span> C#1</div>
+                    <div class="item black"><span>O</span> <span>→</span> D#2</div>
+                    <div class="item black"><span>P</span> <span>→</span> F#3</div>
+                    <div class="item black"><span>[</span> <span>→</span> G#4</div>
+                    <div class="item black"><span>]</span> <span>→</span> A#5</div>
+
+                </div>
+
+                <button id="start-btn">Start Playing</button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

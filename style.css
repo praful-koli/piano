@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+}
+
+:root {
+  --white-key-width: 60px;
+  --white-key-height: 260px;
+  --black-key-width: 38px;
+  --black-key-height: 160px;
+  --gap: 2px;
+  --white-key-color: #e4e3e3;
+  --black-key-color:#171717;
+  --bg-primary-color: black;
+  --text-color:rgb(227, 226, 226);
+  /* Base spacing scale */
+  --space-xxs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-xxl: 3rem; /* 48px */
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: var(--space-xxl);
+}
+main #keyboard {
+  height: 30vh;
+  background-color: #6d6363;
+  position: relative;
+  color: white;
+}
+main #keyboard .white-keys {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #c01414;
+  z-index: 9;
+  gap: var(--space-xxs);
+}
+main #keyboard .white-keys .key {
+  width: var(--white-key-width);
+  height: var(--white-key-height);
+  background-color: var(--white-key-color);
+  display: flex;
+  align-items: flex-end;
+  color: rgb(19, 19, 19);
+  font-size: var(--space-xl);
+  justify-content: center;
+  text-transform: uppercase;
+}
+main #keyboard .black-keys {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  z-index: 10;
+}
+main #keyboard .black-keys .key {
+  width: var(--black-key-width);
+  height: var(--black-key-height);
+  background-color: var(--black-key-color);
+  position: absolute;
+  color: rgb(208, 205, 205);
+  font-size: var(--space-md);
+  display: flex;
+  justify-content: center;
+}
+main #keyboard .black-keys .key:nth-child(1) {
+  left: calc(var(--white-key-width) * 1 - var(--black-key-width) / 2);
+}
+main #keyboard .black-keys .key:nth-child(2) {
+  left: calc(var(--white-key-width) * 2 - var(--black-key-width) / 2 + var(--space-xxs));
+}
+main #keyboard .black-keys .key:nth-child(3) {
+  left: calc(var(--white-key-width) * 4 - var(--black-key-width) / 2 + var(--space-xxs) * 3);
+}
+main #keyboard .black-keys .key:nth-child(4) {
+  left: calc(var(--white-key-width) * 5 - var(--black-key-width) / 2 + var(--space-xxs) * 4);
+}
+main #keyboard .black-keys .key:nth-child(5) {
+  left: calc(var(--white-key-width) * 6 - var(--black-key-width) / 2 + var(--space-xxs) * 5);
+}
+main #keyboard .black-keys .key:nth-child(6) {
+  left: calc(var(--white-key-width) * 8 - var(--black-key-width) / 2 + var(--space-xxs) * 7);
+}
+main #keyboard .black-keys .key:nth-child(7) {
+  left: calc(var(--white-key-width) * 9 - var(--black-key-width) / 2 + var(--space-xxs) * 8);
+}
+main #keyboard .black-keys .key:nth-child(8) {
+  left: calc(var(--white-key-width) * 11 - var(--black-key-width) / 2 + var(--space-xxs) * 10);
+}
+main #keyboard .black-keys .key:nth-child(9) {
+  left: calc(var(--white-key-width) * 12 - var(--black-key-width) / 2 + var(--space-xxs) * 11);
+}
+main #keyboard .black-keys .key:nth-child(10) {
+  left: calc(var(--white-key-width) * 13 - var(--black-key-width) / 2 + var(--space-xxs) * 12);
+}
+main .popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 9999;
+  color: var(--white-key-color);
+}
+main .popup .popup-content {
+  width: 880px;
+  height: 70vh;
+  padding: 28px 20px;
+  background: #171717;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+main .popup .popup-content h2 {
+  font-size: var(--space-lg);
+  font-weight: 400;
+}
+main .popup .popup-content .mapping-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+}
+main .popup .popup-content .mapping-grid .item {
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+main .popup .popup-content .mapping-grid .black {
+  background: #333;
+}
+main .popup .popup-content #start-btn {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--space-xs);
+  font-size: 1.111rem;
+  font-weight: 500;
+  color: #e4e3e3;
+  background: #4e8cff;
+  cursor: pointer;
+}
+main .popup .popup-content #start-btn:hover {
+  background-color: #2f6ee7;
+}
+
+.key.active {
+  transform: translateY(4px);
+  filter: brightness(0.8);
+}/*# sourceMappingURL=style.css.map */
