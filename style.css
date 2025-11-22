@@ -43,6 +43,13 @@ main {
   align-items: flex-end;
   padding: var(--space-xxl);
 }
+main h1 {
+  color: var(--white-key-color);
+  top: 200px;
+  font-size: 70px;
+  position: absolute;
+  font-weight: 300;
+}
 main #keyboard {
   height: 30vh;
   background-color: #6d6363;
