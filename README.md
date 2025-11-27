@@ -72,19 +72,18 @@ A beautiful and interactive **Virtual Piano Web App** built using **HTML, CSS, a
 │── index.html
 │── style.css
 │── script.js
-│
+
 ├── sounds/
 │   ├── C.mp3
 │   ├── D.mp3
 │   ├── E.mp3
 │   └── ...all notes
-│
+
 ├── screenshots/
 │   ├── mapping-screen.png
 │   └── piano-ui.png
-│
-└── README.md
 
+└── README.md
 
 
 
