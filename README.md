@@ -68,8 +68,8 @@ A beautiful and interactive **Virtual Piano Web App** built using **HTML, CSS, a
 ---
 
 ## 📂 Project Structure
-📁 piano-project
-│── index.html
+📁 -piano-project
+│── -index.html
 │── style.css
 │── script.js
 │── /sounds
